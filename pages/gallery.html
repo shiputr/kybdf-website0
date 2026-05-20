@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>গ্যালারি | KYBDF</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        .gallery-item {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+        .gallery-caption {
+            padding: 15px;
+            text-align: center;
+        }
+        .gallery-caption h3 {
+            color: #1b5e20;
+            margin-bottom: 5px;
+        }
+        .gallery-caption p {
+            color: #666;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body class="lang-bn">
+
+<div class="top-header" id="topHeader"></div>
+
+<div class="logo-social-bar">
+    <div class="container logo-social-flex">
+        <div class="logo-area">
+            <img src="../images/logo.png" alt="KYBDF Logo" onerror="this.src='https://via.placeholder.com/55?text=KYBDF'">
+            <div class="logo-text">
+                <h1 class="bn-name">কলমাকান্দা যুব রক্তদান ফাউন্ডেশন</h1>
+                <p class="en-name">Kalmakanda Youth Blood Donate Foundation (KYBDF)</p>
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="far fa-envelope"></i></a>
+            </div>
+            <div class="language-switch">
+                <button class="lang-option active" data-lang="bn">বাংলা</button>
+                <button class="lang-option" data-lang="en">English</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<nav class="navbar">
+    <div class="container nav-flex">
+        <div class="hamburger"><i class="fas fa-bars"></i></div>
+        <ul class="nav-menu">
+            <li><a href="../index.html">হোম</a></li>
+            <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+            <li><a href="activities.html">কার্যক্রম</a></li>
+            <li class="dropdown"><a href="#" class="dropdown-toggle">পরিষদ <i class="fas fa-chevron-down arrow-icon"></i></a>
+                <ul class="dropdown-menu"><li><a href="advisors.html">উপদেষ্টা পরিষদ</a></li><li><a href="governing-body.html">পরিচালনা পরিষদ</a></li></ul>
+            </li>
+            <li class="dropdown"><a href="#" class="dropdown-toggle">কমিটি <i class="fas fa-chevron-down arrow-icon"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="central-committee.html">কেন্দ্রীয় কমিটি</a></li>
+                    <li class="dropdown-submenu"><a href="#">ইউনিয়ন কমিটি <i class="fas fa-chevron-right"></i></a>
+                        <ul class="submenu"><li><a href="union-kalmakanda.html">কলমাকান্দা সদর ইউনিয়ন</a></li><li><a href="union-nazirpur.html">নাজিরপুর ইউনিয়ন</a></li><li><a href="union-pogla.html">পোগলা ইউনিয়ন</a></li><li><a href="union-borkhapen.html">বড়খাপন ইউনিয়ন</a></li><li><a href="union-lengura.html">লেঙ্গুড়া ইউনিয়ন</a></li><li><a href="union-kailati.html">কৈলাটি ইউনিয়ন</a></li><li><a href="union-khornai.html">খারনৈ ইউনিয়ন</a></li><li><a href="union-rangchati.html">রংছাতি ইউনিয়ন</a></li></ul>
+                    </li>
+                    <li class="dropdown-submenu"><a href="#">আঞ্চলিক কমিটি <i class="fas fa-chevron-right"></i></a>
+                        <ul class="submenu"><li><a href="regional-north.html">কলমাকান্দা উত্তর</a></li><li><a href="regional-south.html">কলমাকান্দা দক্ষিণ</a></li><li><a href="regional-west.html">কলমাকান্দা পশ্চিম</a></li></ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdown"><a href="#" class="dropdown-toggle">সদস্য ফরম <i class="fas fa-chevron-down arrow-icon"></i></a>
+                <ul class="dropdown-menu"><li><a href="member-permanent.html">স্থায়ী সদস্য ফরম</a></li><li><a href="member-general.html">সাধারণ সদস্য ফরম</a></li></ul>
+            </li>
+            <li class="dropdown"><a href="#" class="dropdown-toggle">সদস্য তালিকা <i class="fas fa-chevron-down arrow-icon"></i></a>
+                <ul class="dropdown-menu"><li><a href="permanent-members.html">স্থায়ী সদস্য</a></li><li><a href="general-members.html">সাধারণ সদস্য</a></li></ul>
+            </li>
+            <li class="dropdown"><a href="#" class="dropdown-toggle active">গ্যালারি ও নিউজ <i class="fas fa-chevron-down arrow-icon"></i></a>
+                <ul class="dropdown-menu"><li><a href="gallery.html" class="active">গ্যালারি</a></li><li><a href="news.html">নিউজ</a></li></ul>
+            </li>
+            <li><a href="blood-donation.html">রক্তদান</a></li>
+            <li><a href="notice.html">নোটিশ</a></li>
+            <li><a href="donation.html">ডোনেশন</a></li>
+            <li><a href="contact.html">যোগাযোগ</a></li>
+            <li><a href="login.html" class="login-btn"><i class="fas fa-sign-in-alt"></i> লগইন</a></li>
+        </ul>
+        <button class="more-btn">More <i class="fas fa-chevron-down"></i></button>
+        <ul class="more-dropdown"></ul>
+    </div>
+</nav>
+
+<main>
+    <div class="container">
+        <div class="page-header">
+            <h1>গ্যালারি</h1>
+            <p>আমাদের কার্যক্রমের ছবি ও মুহূর্ত</p>
+        </div>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item" onclick="openModal('রক্তদান শিবির ২০২৬', '২৫ অক্টোবর, কলমাকান্দা হাসপাতালে অনুষ্ঠিত রক্তদান শিবির')">
+                <img src="https://via.placeholder.com/400x250?text=Blood+Donation+Camp" alt="রক্তদান শিবির">
+                <div class="gallery-caption"><h3>রক্তদান শিবির ২০২৬</h3><p>২৫ অক্টোবর, কলমাকান্দা হাসপাতাল</p></div>
+            </div>
+            <div class="gallery-item" onclick="openModal('শীতবস্ত্র বিতরণ', '২০ জানুয়ারি, কলমাকান্দা সদরে শীতবস্ত্র বিতরণ কর্মসূচি')">
+                <img src="https://via.placeholder.com/400x250?text=Winter+Clothes" alt="শীতবস্ত্র বিতরণ">
+                <div class="gallery-caption"><h3>শীতবস্ত্র বিতরণ</h3><p>২০ জানুয়ারি, কলমাকান্দা সদর</p></div>
+            </div>
+            <div class="gallery-item" onclick="openModal('মেডিকেল ক্যাম্প', '১৫ মার্চ, কলমাকান্দায় বিনামূল্যে মেডিকেল ক্যাম্প')">
+                <img src="https://via.placeholder.com/400x250?text=Medical+Camp" alt="মেডিকেল ক্যাম্প">
+                <div class="gallery-caption"><h3>বিনামূল্যে মেডিকেল ক্যাম্প</h3><p>১৫ মার্চ, কলমাকান্দা</p></div>
+            </div>
+            <div class="gallery-item" onclick="openModal('বৃক্ষরোপণ অভিযান', '৫ জুন, বিশ্ব পরিবেশ দিবস উপলক্ষে বৃক্ষরোপণ')">
+                <img src="https://via.placeholder.com/400x250?text=Tree+Plantation" alt="বৃক্ষরোপণ">
+                <div class="gallery-caption"><h3>বৃক্ষরোপণ অভিযান</h3><p>৫ জুন, বিশ্ব পরিবেশ দিবস</p></div>
+            </div>
+            <div class="gallery-item" onclick="openModal('বার্ষিক সাধারণ সভা', '৩০ মার্চ, কলমাকান্দায় বার্ষিক সাধারণ সভা')">
+                <img src="https://via.placeholder.com/400x250?text=Annual+Meeting" alt="বার্ষিক সভা">
+                <div class="gallery-caption"><h3>বার্ষিক সাধারণ সভা</h3><p>৩০ মার্চ, কলমাকান্দা</p></div>
+            </div>
+            <div class="gallery-item" onclick="openModal('ব্লাড গ্রুপিং ক্যাম্প', '১২ সেপ্টেম্বর, বিনামূল্যে ব্লাড গ্রুপিং ক্যাম্প')">
+                <img src="https://via.placeholder.com/400x250?text=Blood+Grouping" alt="ব্লাড গ্রুপিং">
+                <div class="gallery-caption"><h3>বিনামূল্যে ব্লাড গ্রুপিং</h3><p>১২ সেপ্টেম্বর, কলমাকান্দা</p></div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- মডাল -->
+<div id="infoModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <i class="fas fa-image" style="font-size: 50px; color: #c62828; margin-bottom: 15px;"></i>
+        <h2 class="modal-title" id="modalTitle">ইভেন্টের নাম</h2>
+        <p class="modal-text" id="modalText">বিস্তারিত বিবরণ</p>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div><h4>কলমাকান্দা যুব রক্তদান ফাউন্ডেশন</h4><p>একটি অরাজনৈতিক স্বেচ্ছাসেবী রক্তদান ও সামাজিক সংগঠন</p></div>
+            <div><h4>যোগাযোগ</h4><p><i class="fas fa-phone"></i> ০১৭৩৬-৫৬৭৬২০<br><i class="fab fa-whatsapp"></i> ০১৭৩৬-৫৬৭৬২০<br><i class="far fa-envelope"></i> kalmakandaybf@gmail.com</p></div>
+            <div><h4>প্রধান কার্যালয়</h4><p>কলমাকান্দা সদর, নেত্রকোণা</p></div>
+        </div>
+        <div class="copyright"><p>&copy; ২০২৩-২০২৬ KYBDF | সর্বস্বত্ব সংরক্ষিত | Developed by: Tanvir Rahman Shipu</p></div>
+    </div>
+</footer>
+
+<script src="../js/script.js"></script>
+</body>
+</html>

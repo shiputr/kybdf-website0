@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>কার্যক্রম | KYBDF</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .activities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .activity-card {
+            background: white;
+            border-radius: 25px;
+            padding: 30px;
+            text-align: center;
+            transition: 0.3s;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            cursor: pointer;
+        }
+        .activity-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        .activity-card i {
+            font-size: 55px;
+            color: #c62828;
+            margin-bottom: 20px;
+        }
+        .activity-card h3 {
+            color: #1b5e20;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        .activity-card ul {
+            text-align: left;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+        .activity-card li {
+            margin: 10px 0;
+            color: #555;
+        }
+    </style>
+</head>
+<body class="lang-bn">
+
+<div class="top-header" id="topHeader"></div>
+
+<div class="logo-social-bar">
+    <div class="container logo-social-flex">
+        <div class="logo-area">
+            <img src="../images/logo.png" alt="KYBDF Logo" onerror="this.src='https://via.placeholder.com/55?text=KYBDF'">
+            <div class="logo-text">
+                <h1 class="bn-name">কলমাকান্দা যুব রক্তদান ফাউন্ডেশন</h1>
+                <p class="en-name">Kalmakanda Youth Blood Donate Foundation (KYBDF)</p>
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="far fa-envelope"></i></a>
+            </div>
+            <div class="language-switch">
+                <button class="lang-option active" data-lang="bn">বাংলা</button>
+                <button class="lang-option" data-lang="en">English</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<nav class="navbar">
+    <div class="container nav-flex">
+        <div class="hamburger"><i class="fas fa-bars"></i></div>
+        <ul class="nav-menu">
+            <li><a href="../index.html">হোম</a></li>
+            <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+            <li><a href="activities.html" class="active">কার্যক্রম</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">পরিষদ <i class="fas fa-chevron-down arrow-icon"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="advisors.html">উপদেষ্টা পরিষদ</a></li>
+                    <li><a href="governing-body.html">পরিচালনা পরিষদ</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">কমিটি <i class="fas fa-chevron-down arrow-icon"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="central-committee.html">কেন্দ্রীয় কমিটি</a></li>
+                    <li class="dropdown-submenu"><a href="#">ইউনিয়ন কমিটি <i class="fas fa-chevron-right"></i></a>
+                        <ul class="submenu">
+                            <li><a href="union-kalmakanda.html">কলমাকান্দা সদর ইউনিয়ন</a></li>
+                            <li><a href="union-nazirpur.html">নাজিরপুর ইউনিয়ন</a></li>
+                            <li><a href="union-pogla.html">পোগলা ইউনিয়ন</a></li>
+                            <li><a href="union-borkhapen.html">বড়খাপন ইউনিয়ন</a></li>
+                            <li><a href="union-lengura.html">লেঙ্গুড়া ইউনিয়ন</a></li>
+                            <li><a href="union-kailati.html">কৈলাটি ইউনিয়ন</a></li>
+                            <li><a href="union-khornai.html">খারনৈ ইউনিয়ন</a></li>
+                            <li><a href="union-rangchati.html">রংছাতি ইউনিয়ন</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-submenu"><a href="#">আঞ্চলিক কমিটি <i class="fas fa-chevron-right"></i></a>
+                        <ul class="submenu">
+                            <li><a href="regional-north.html">কলমাকান্দা উত্তর</a></li>
+                            <li><a href="regional-south.html">কলমাকান্দা দক্ষিণ</a></li>
+                            <li><a href="regional-west.html">কলমাকান্দা পশ্চিম</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">সদস্য ফরম <i class="fas fa-chevron-down arrow-icon"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="member-permanent.html">স্থায়ী সদস্য ফরম</a></li>
+                    <li><a href="member-general.html">সাধারণ সদস্য ফরম</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">সদস্য তালিকা <i class="fas fa-chevron-down arrow-icon"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="permanent-members.html">স্থায়ী সদস্য</a></li>
+                    <li><a href="general-members.html">সাধারণ সদস্য</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">গ্যালারি ও নিউজ <i class="fas fa-chevron-down arrow-icon"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="gallery.html">গ্যালারি</a></li>
+                    <li><a href="news.html">নিউজ</a></li>
+                </ul>
+            </li>
+            <li><a href="blood-donation.html">রক্তদান</a></li>
+            <li><a href="notice.html">নোটিশ</a></li>
+            <li><a href="donation.html">ডোনেশন</a></li>
+            <li><a href="contact.html">যোগাযোগ</a></li>
+            <li><a href="login.html" class="login-btn"><i class="fas fa-sign-in-alt"></i> লগইন</a></li>
+        </ul>
+        <button class="more-btn">More <i class="fas fa-chevron-down"></i></button>
+        <ul class="more-dropdown"></ul>
+    </div>
+</nav>
+
+<main>
+    <div class="container">
+        <div class="page-header">
+            <h1>আমাদের কার্যক্রম</h1>
+            <p>গঠনতন্ত্রের ধারা ৪ অনুযায়ী আমাদের প্রধান কার্যক্রমসমূহ</p>
+        </div>
+        
+        <div class="activities-grid">
+            <div class="activity-card" onclick="openModal('রক্তদান সেবা', 'গঠনতন্ত্রের ধারা ৪.২ অনুযায়ী রক্তদান সংক্রান্ত কার্যক্রমের মধ্যে রয়েছে: নিয়মিত রক্তদান কর্মসূচি ও রক্তদাতা সৃষ্টি, জরুরি প্রয়োজনে রোগী ও রক্তদাতার সংযোগ স্থাপন, বিনামূল্যে ব্লাড গ্রুপিং ক্যাম্পেইন, থ্যালাসেমিয়া ও ক্যান্সার রোগীদের জন্য বিশেষ রক্তদানের ব্যবস্থা, সিজারিয়ান অপারেশনের জন্য প্রস্তুত রক্তদাতার ব্যবস্থা।')">
+                <i class="fas fa-tint"></i>
+                <h3>রক্তদান সেবা</h3>
+                <ul>
+                    <li>নিয়মিত রক্তদান কর্মসূচি ও রক্তদাতা সৃষ্টি</li>
+                    <li>জরুরি প্রয়োজনে রোগী ও রক্তদাতার সংযোগ স্থাপন</li>
+                    <li>বিনামূল্যে ব্লাড গ্রুপিং ক্যাম্পেইন</li>
+                </ul>
+            </div>
+            
+            <div class="activity-card" onclick="openModal('সামাজিক ও মানবিক উন্নয়ন', 'গঠনতন্ত্রের ধারা ৪.৩ অনুযায়ী সামাজিক উন্নয়নমূলক কার্যক্রমের মধ্যে রয়েছে: যুব সমাজকে মাদকমুক্ত ও মানবিক স্বেচ্ছাসেবক হিসেবে গঠন, শীতবস্ত্র বিতরণ ও দুর্যোগ সহায়তা, অসহায় ও দুস্থ মানুষের পাশে দাঁড়ানো, বৃক্ষরোপণ ও পরিবেশ সচেতনতা, এতিম ও অসহায় শিশুদের শিক্ষা সহায়তা।')">
+                <i class="fas fa-hand-holding-heart"></i>
+                <h3>সামাজিক ও মানবিক উন্নয়ন</h3>
+                <ul>
+                    <li>যুব সমাজকে মাদকমুক্ত ও মানবিক স্বেচ্ছাসেবক হিসেবে গঠন</li>
+                    <li>শীতবস্ত্র বিতরণ ও দুর্যোগ সহায়তা</li>
+                    <li>বৃক্ষরোপণ ও পরিবেশ সচেতনতা</li>
+                </ul>
+            </div>
+            
+            <div class="activity-card" onclick="openModal('সাংগঠনিক ও সচেতনতা বৃদ্ধি', 'গঠনতন্ত্রের ধারা ৪.৪ অনুযায়ী সাংগঠনিক উন্নয়নমূলক কার্যক্রমের মধ্যে রয়েছে: ডিজিটাল প্ল্যাটফর্ম ব্যবহার করে মানবসেবা সম্প্রসারণ, সামাজিক যোগাযোগ মাধ্যমে কার্যক্রম পরিচালনা, স্কুল-কলেজে রক্তদান বিষয়ক শিক্ষামূলক প্রোগ্রাম, বার্ষিক মেডিকেল ক্যাম্প ও রক্তদান শিবির, সদস্য প্রশিক্ষণ ও সক্ষমতা উন্নয়ন।')">
+                <i class="fas fa-chart-line"></i>
+                <h3>সাংগঠনিক ও সচেতনতা বৃদ্ধি</h3>
+                <ul>
+                    <li>ডিজিটাল প্ল্যাটফর্ম ব্যবহার করে মানবসেবা সম্প্রসারণ</li>
+                    <li>স্কুল-কলেজে রক্তদান বিষয়ক শিক্ষামূলক প্রোগ্রাম</li>
+                    <li>বার্ষিক মেডিকেল ক্যাম্প ও রক্তদান শিবির</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- মডাল -->
+<div id="infoModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <i class="fas fa-info-circle" style="font-size: 50px; color: #c62828; margin-bottom: 15px;"></i>
+        <h2 class="modal-title" id="modalTitle">কার্যক্রমের নাম</h2>
+        <p class="modal-text" id="modalText">বিস্তারিত বিবরণ এখানে দেখানো হবে।</p>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div><h4>কলমাকান্দা যুব রক্তদান ফাউন্ডেশন</h4><p>একটি অরাজনৈতিক স্বেচ্ছাসেবী রক্তদান ও সামাজিক সংগঠন</p></div>
+            <div><h4>যোগাযোগ</h4><p><i class="fas fa-phone"></i> ০১৭৩৬-৫৬৭৬২০<br><i class="fab fa-whatsapp"></i> ০১৭৩৬-৫৬৭৬২০<br><i class="far fa-envelope"></i> kalmakandaybf@gmail.com</p></div>
+            <div><h4>প্রধান কার্যালয়</h4><p>কলমাকান্দা সদর, নেত্রকোণা</p></div>
+        </div>
+        <div class="copyright"><p>&copy; ২০২৩-২০২৬ KYBDF | সর্বস্বত্ব সংরক্ষিত | Developed by: Tanvir Rahman Shipu</p></div>
+    </div>
+</footer>
+
+<script src="../js/script.js"></script>
+</body>
+</html>

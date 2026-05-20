@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>বড়খাপন ইউনিয়ন কমিটি | KYBDF</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .member-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .member-card {
+            background: white;
+            border-radius: 25px;
+            padding: 25px;
+            text-align: center;
+            transition: 0.3s;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        .member-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        .member-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 3px solid #c62828;
+            padding: 3px;
+        }
+        .member-card h3 {
+            color: #1b5e20;
+            margin-bottom: 5px;
+        }
+        .member-card .designation {
+            color: #c62828;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .member-card .blood-group {
+            display: inline-block;
+            background: #f0f0f0;
+            padding: 3px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body class="lang-bn">
+
+<div class="top-header" id="topHeader"></div>
+
+<div class="logo-social-bar">
+    <div class="container logo-social-flex">
+        <div class="logo-area">
+            <img src="../images/logo.png" alt="KYBDF Logo" onerror="this.src='https://via.placeholder.com/55?text=KYBDF'">
+            <div class="logo-text">
+                <h1 class="bn-name">কলমাকান্দা যুব রক্তদান ফাউন্ডেশন</h1>
+                <p class="en-name">Kalmakanda Youth Blood Donate Foundation (KYBDF)</p>
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="far fa-envelope"></i></a>
+            </div>
+            <div class="language-switch">
+                <button class="lang-option active" data-lang="bn">বাংলা</button>
+                <button class="lang-option" data-lang="en">English</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<nav class="navbar">
+    <div class="container nav-flex">
+        <div class="hamburger"><i class="fas fa-bars"></i></div>
+        <ul class="nav-menu">
+            <li><a href="../index.html">হোম</a></li>
+            <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+            <li><a href="activities.html">কার্যক্রম</a></li>
+            <li class="dropdown"><a href="#" class="dropdown-toggle">পরিষদ <i class="fas fa-chevron-down arrow-icon"></i></a>
+                <ul class="dropdown-menu"><li><a href="advisors.html">উপদেষ্টা পরিষদ</a></li><li><a href="governing-body.html">পরিচালনা পরিষদ</a></li></ul>
+            </li>
+            <li class="dropdown"><a href="#" class="dropdown-toggle active">কমিটি <i class="fas fa-chevron-down arrow-icon"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="central-committee.html">কেন্দ্রীয় কমিটি</a></li>
+                    <li class="dropdown-submenu"><a href="#">ইউনিয়ন কমিটি <i class="fas fa-chevron-right"></i></a>
+                        <ul class="submenu">
+                            <li><a href="union-kalmakanda.html">কলমাকান্দা সদর ইউনিয়ন</a></li>
+                            <li><a href="union-nazirpur.html">নাজিরপুর ইউনিয়ন</a></li>
+                            <li><a href="union-pogla.html">পোগলা ইউনিয়ন</a></li>
+                            <li><a href="union-borkhapn.html" class="active">বড়খাপন ইউনিয়ন</a></li>
+                            <li><a href="union-lengura.html">লেঙ্গুড়া ইউনিয়ন</a></li>
+                            <li><a href="union-kailati.html">কৈলাটি ইউনিয়ন</a></li>
+                            <li><a href="union-khornai.html">খারনৈ ইউনিয়ন</a></li>
+                            <li><a href="union-rangchati.html">রংছাতি ইউনিয়ন</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-submenu"><a href="#">আঞ্চলিক কমিটি <i class="fas fa-chevron-right"></i></a>
+                        <ul class="submenu"><li><a href="regional-north.html">কলমাকান্দা উত্তর</a></li><li><a href="regional-south.html">কলমাকান্দা দক্ষিণ</a></li><li><a href="regional-west.html">কলমাকান্দা পশ্চিম</a></li></ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdown"><a href="#" class="dropdown-toggle">সদস্য ফরম <i class="fas fa-chevron-down arrow-icon"></i></a>
+                <ul class="dropdown-menu"><li><a href="member-permanent.html">স্থায়ী সদস্য ফরম</a></li><li><a href="member-general.html">সাধারণ সদস্য ফরম</a></li></ul>
+            </li>
+            <li class="dropdown"><a href="#" class="dropdown-toggle">সদস্য তালিকা <i class="fas fa-chevron-down arrow-icon"></i></a>
+                <ul class="dropdown-menu"><li><a href="permanent-members.html">স্থায়ী সদস্য</a></li><li><a href="general-members.html">সাধারণ সদস্য</a></li></ul>
+            </li>
+            <li class="dropdown"><a href="#" class="dropdown-toggle">গ্যালারি ও নিউজ <i class="fas fa-chevron-down arrow-icon"></i></a>
+                <ul class="dropdown-menu"><li><a href="gallery.html">গ্যালারি</a></li><li><a href="news.html">নিউজ</a></li></ul>
+            </li>
+            <li><a href="blood-donation.html">রক্তদান</a></li>
+            <li><a href="notice.html">নোটিশ</a></li>
+            <li><a href="donation.html">ডোনেশন</a></li>
+            <li><a href="contact.html">যোগাযোগ</a></li>
+            <li><a href="login.html" class="login-btn"><i class="fas fa-sign-in-alt"></i> লগইন</a></li>
+        </ul>
+        <button class="more-btn">More <i class="fas fa-chevron-down"></i></button>
+        <ul class="more-dropdown"></ul>
+    </div>
+</nav>
+
+<main>
+    <div class="container">
+        <div class="page-header">
+            <h1>বড়খাপন ইউনিয়ন কমিটি</h1>
+            <p>গঠনতন্ত্রের ধারা ২১ অনুযায়ী — ১১টি স্থায়ী পদ</p>
+        </div>
+        
+        <div class="member-grid">
+            <div class="member-card"><img src="https://via.placeholder.com/120?text=President"><h3>সভাপতি</h3><p class="designation">শূন্য</p><span class="blood-group">রক্তের গ্রুপ: ___</span></div>
+            <div class="member-card"><img src="https://via.placeholder.com/120?text=VP"><h3>সহ সভাপতি</h3><p class="designation">শূন্য</p><span class="blood-group">রক্তের গ্রুপ: ___</span></div>
+            <div class="member-card"><img src="https://via.placeholder.com/120?text=Secretary"><h3>সাধারণ সম্পাদক</h3><p class="designation">শূন্য</p><span class="blood-group">রক্তের গ্রুপ: ___</span></div>
+            <div class="member-card"><img src="https://via.placeholder.com/120?text=Joint+Secretary"><h3>যুগ্ম সাধারণ সম্পাদক</h3><p class="designation">শূন্য</p><span class="blood-group">রক্তের গ্রুপ: ___</span></div>
+            <div class="member-card"><img src="https://via.placeholder.com/120?text=Org+Secretary"><h3>সাংগঠনিক সম্পাদক</h3><p class="designation">শূন্য</p><span class="blood-group">রক্তের গ্রুপ: ___</span></div>
+            <div class="member-card"><img src="https://via.placeholder.com/120?text=Asst+Org"><h3>সহ সাংগঠনিক সম্পাদক</h3><p class="designation">শূন্য</p><span class="blood-group">রক্তের গ্রুপ: ___</span></div>
+            <div class="member-card"><img src="https://via.placeholder.com/120?text=Finance"><h3>অর্থ বিষয়ক সম্পাদক</h3><p class="designation">শূন্য</p><span class="blood-group">রক্তের গ্রুপ: ___</span></div>
+            <div class="member-card"><img src="https://via.placeholder.com/120?text=Publicity"><h3>প্রচার সম্পাদক</h3><p class="designation">শূন্য</p><span class="blood-group">রক্তের গ্রুপ: ___</span></div>
+            <div class="member-card"><img src="https://via.placeholder.com/120?text=IT"><h3>তথ্য ও প্রযুক্তি সম্পাদক</h3><p class="designation">শূন্য</p><span class="blood-group">রক্তের গ্রুপ: ___</span></div>
+            <div class="member-card"><img src="https://via.placeholder.com/120?text=Communication"><h3>যোগাযোগ বিষয়ক সম্পাদক</h3><p class="designation">শূন্য</p><span class="blood-group">রক্তের গ্রুপ: ___</span></div>
+            <div class="member-card"><img src="https://via.placeholder.com/120?text=Executive"><h3>কার্যকরী সদস্য</h3><p class="designation">শূন্য</p><span class="blood-group">রক্তের গ্রুপ: ___</span></div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div><h4>কলমাকান্দা যুব রক্তদান ফাউন্ডেশন</h4><p>একটি অরাজনৈতিক স্বেচ্ছাসেবী রক্তদান ও সামাজিক সংগঠন</p></div>
+            <div><h4>যোগাযোগ</h4><p><i class="fas fa-phone"></i> ০১৭৩৬-৫৬৭৬২০<br><i class="fab fa-whatsapp"></i> ০১৭৩৬-৫৬৭৬২০<br><i class="far fa-envelope"></i> kalmakandaybf@gmail.com</p></div>
+            <div><h4>প্রধান কার্যালয়</h4><p>কলমাকান্দা সদর, নেত্রকোণা</p></div>
+        </div>
+        <div class="copyright"><p>&copy; ২০২৩-২০২৬ KYBDF | সর্বস্বত্ব সংরক্ষিত | Developed by: Tanvir Rahman Shipu</p></div>
+    </div>
+</footer>
+
+<script src="../js/script.js"></script>
+</body>
+</html>

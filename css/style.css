@@ -1,0 +1,826 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', 'Noto Sans Bengali', sans-serif;
+    background: #f4fcf4;
+    color: #1a3a1a;
+}
+
+.container {
+    max-width: 1250px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* ===== 10px হেডার ===== */
+.top-header {
+    background: linear-gradient(135deg, #c62828, #1b5e20);
+    height: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1001;
+    transition: transform 0.3s;
+}
+
+.top-header.hide {
+    transform: translateY(-100%);
+}
+
+/* ===== লোগো ও সোশ্যাল বার ===== */
+.logo-social-bar {
+    background: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    padding: 10px 0;
+    position: relative;
+    margin-top: 10px;
+}
+
+.logo-social-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-area img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.logo-text {
+    text-align: left;
+}
+
+.logo-text .bn-name {
+    font-size: 1.2rem;
+    color: #1b5e20;
+    margin: 0;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.logo-text .en-name {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0;
+    display: none;
+}
+
+/* ভাষা অনুযায়ী লোগো দেখানো */
+body.lang-bn .logo-text .bn-name {
+    display: block;
+    font-size: 1.2rem;
+}
+
+body.lang-bn .logo-text .en-name {
+    display: none;
+}
+
+body.lang-en .logo-text .bn-name {
+    display: none;
+}
+
+body.lang-en .logo-text .en-name {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1b5e20;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icons a {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #c62828, #1b5e20);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px) rotate(360deg);
+    background: #ffd966;
+    color: #c62828;
+}
+
+.language-switch {
+    display: flex;
+    gap: 5px;
+    background: #f0f0f0;
+    padding: 4px;
+    border-radius: 40px;
+}
+
+.lang-option {
+    background: transparent;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 40px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.lang-option.active {
+    background: #1b5e20;
+    color: white;
+}
+
+/* ===== মেনুবার ===== */
+.navbar {
+    background: #0e2a0e;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+    position: relative;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    position: relative;
+    list-style: none;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: #f0f0f0;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 30px;
+    transition: 0.3s;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.nav-menu li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffd966;
+}
+
+.nav-menu li a.active {
+    background: #c62828;
+    color: white;
+}
+
+.login-btn {
+    background: #ffd966 !important;
+    color: #1b5e20 !important;
+}
+
+.login-btn:hover {
+    background: white !important;
+    color: #c62828 !important;
+}
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+/* ===== ড্রপডাউন মেনু ===== */
+.dropdown-menu {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background: #0e2a0e;
+    min-width: 220px;
+    border-radius: 12px;
+    padding: 10px 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    top: 45px;
+}
+
+.dropdown-menu li {
+    display: block;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 8px 20px;
+    color: #f0f0f0;
+    font-size: 0.85rem;
+    border-radius: 0;
+}
+
+.dropdown-menu li a:hover {
+    background: #c62828;
+    color: white;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+}
+
+.arrow-icon {
+    font-size: 0.7rem;
+    margin-left: 5px;
+    transition: transform 0.3s;
+}
+
+.dropdown:hover .arrow-icon {
+    transform: rotate(180deg);
+}
+
+/* ===== সাবমেনু ===== */
+.dropdown-submenu {
+    position: relative;
+}
+
+.submenu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: #0e2a0e;
+    min-width: 200px;
+    border-radius: 12px;
+    padding: 10px 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    list-style: none;
+}
+
+.dropdown-submenu:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.submenu li a {
+    display: block;
+    padding: 8px 20px;
+}
+
+/* ===== মোর বাটন ===== */
+.more-btn {
+    background: #c62828;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    gap: 5px;
+}
+
+.more-dropdown {
+    position: absolute;
+    top: 45px;
+    right: 0;
+    background: #0e2a0e;
+    min-width: 220px;
+    border-radius: 12px;
+    padding: 10px 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    list-style: none;
+}
+
+.more-dropdown.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.more-dropdown li a {
+    display: block;
+    padding: 8px 20px;
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.more-dropdown li a:hover {
+    background: #c62828;
+    color: white;
+}
+
+/* ===== হিরো সেকশন ===== */
+.hero {
+    background: linear-gradient(115deg, #c62828cc, #1b5e20cc), url('https://via.placeholder.com/1600x500?text=Blood+Donation');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    margin: 30px 0;
+    border-radius: 50px;
+}
+
+.hero h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.hero h2 span {
+    color: #ffd966;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: #ffd966;
+    color: #1b5e20;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-outline {
+    border: 2px solid white;
+    color: white;
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: #c62828;
+    transform: translateY(-3px);
+}
+
+/* ===== স্ট্যাটস ===== */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    margin: 40px 0;
+}
+
+.stat-card {
+    background: white;
+    padding: 25px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-8px);
+}
+
+.stat-card i {
+    font-size: 40px;
+    color: #c62828;
+}
+
+.stat-card h2 {
+    font-size: 2rem;
+    color: #1b5e20;
+}
+
+/* ===== সতর্কতা বার ===== */
+.alert-bar {
+    background: #fff3cd;
+    color: #856404;
+    padding: 12px 20px;
+    text-align: center;
+    border-radius: 50px;
+    margin: 20px 0;
+    border-left: 5px solid #c62828;
+}
+
+/* ===== ফিচার সেকশন ===== */
+.features-section {
+    background: white;
+    border-radius: 50px;
+    padding: 50px 0;
+    margin: 40px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #1b5e20;
+    margin-bottom: 35px;
+}
+
+.section-title:after {
+    content: '';
+    width: 80px;
+    height: 3px;
+    background: #c62828;
+    display: block;
+    margin: 12px auto 0;
+    border-radius: 5px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background: #f8fff8;
+    padding: 30px 20px;
+    border-radius: 35px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card i {
+    font-size: 45px;
+    color: #c62828;
+    margin-bottom: 15px;
+}
+
+/* ===== ফর্ম ===== */
+.form-container {
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    padding: 35px;
+    border-radius: 45px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 20px;
+    border: 2px solid #e0e8e0;
+    border-radius: 50px;
+    font-family: inherit;
+}
+
+.btn-block {
+    width: 100%;
+    background: linear-gradient(135deg, #c62828, #1b5e20);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* ===== পেজ হেডার ===== */
+.page-header {
+    background: linear-gradient(135deg, #c62828, #1b5e20);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    margin: 30px 0;
+    border-radius: 50px;
+}
+
+.page-header h1 {
+    font-size: 2.2rem;
+}
+
+/* ===== কন্টেন্ট কার্ড ===== */
+.content-card {
+    background: white;
+    border-radius: 30px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.content-card h2 {
+    color: #c62828;
+    margin-bottom: 20px;
+    border-left: 4px solid #c62828;
+    padding-left: 15px;
+}
+
+/* ===== সদস্য গ্রিড ===== */
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.member-card {
+    background: white;
+    border-radius: 25px;
+    padding: 25px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.member-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #c62828;
+    padding: 3px;
+}
+
+.member-card h3 {
+    color: #1b5e20;
+    margin-bottom: 5px;
+}
+
+.member-card .designation {
+    color: #c62828;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.member-card .blood-group {
+    display: inline-block;
+    background: #f0f0f0;
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    margin-top: 8px;
+}
+
+/* ===== সার্চ বক্স ===== */
+.search-box {
+    max-width: 500px;
+    margin: 20px auto 30px;
+    display: flex;
+    gap: 10px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 12px 20px;
+    border: 2px solid #e0e8e0;
+    border-radius: 50px;
+    font-family: inherit;
+}
+
+.search-box button {
+    background: #c62828;
+    color: white;
+    border: none;
+    padding: 0 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    background: #1b5e20;
+}
+
+/* ===== ফুটার ===== */
+.footer {
+    background: #0e2a0e;
+    color: #d4e8d4;
+    padding: 45px 0 20px;
+    margin-top: 50px;
+    border-radius: 40px 40px 0 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 35px;
+}
+
+.footer h4 {
+    color: #ffcd4a;
+    margin-bottom: 15px;
+}
+
+.footer p {
+    margin: 8px 0;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 25px;
+    margin-top: 25px;
+    border-top: 1px solid #2a5a2a;
+    font-size: 0.85rem;
+}
+
+/* ===== মডাল ===== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: #fff;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 30px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    animation: modalFade 0.3s;
+    text-align: center;
+}
+
+@keyframes modalFade {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #c62828;
+    cursor: pointer;
+    background: #f0f0f0;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.close-modal:hover {
+    background: #c62828;
+    color: white;
+    transform: rotate(90deg);
+}
+
+/* ===== রেস্পন্সিভ ===== */
+@media (max-width: 992px) {
+    .nav-menu li a {
+        font-size: 0.75rem;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    
+    .nav-flex {
+        justify-content: space-between;
+    }
+    
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 15px;
+        background: #0e2a0e;
+        border-radius: 20px;
+        padding: 15px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+    }
+    
+    .nav-menu.show {
+        display: flex;
+    }
+    
+    .nav-menu li {
+        width: 100%;
+    }
+    
+    .nav-menu li a {
+        display: block;
+        width: 100%;
+    }
+    
+    .dropdown-menu {
+        position: static;
+        background: #1a4a1a;
+        margin-left: 20px;
+        opacity: 1;
+        visibility: visible;
+        display: none;
+    }
+    
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+    
+    .submenu {
+        position: static;
+        background: #2a5a2a;
+        margin-left: 20px;
+        opacity: 1;
+        visibility: visible;
+        display: none;
+    }
+    
+    .dropdown-submenu:hover .submenu {
+        display: block;
+    }
+    
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+    
+    .right-section {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+    
+    .more-btn {
+        display: none !important;
+    }
+}

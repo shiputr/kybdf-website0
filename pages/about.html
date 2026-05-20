@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>আমাদের সম্পর্কে | KYBDF</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .founder-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+        .founder-card {
+            background: #f8fff8;
+            padding: 25px;
+            border-radius: 25px;
+            text-align: center;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .founder-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .founder-card img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 4px solid #c62828;
+            padding: 4px;
+        }
+        .founder-card h3 {
+            color: #1b5e20;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        .founder-card p {
+            color: #555;
+            margin-bottom: 5px;
+        }
+        .founder-card small {
+            color: #888;
+        }
+        .info-list {
+            list-style: none;
+            padding: 0;
+        }
+        .info-list li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+        }
+        .info-list li i {
+            position: absolute;
+            left: 0;
+            top: 3px;
+            color: #c62828;
+        }
+        .btn-read {
+            display: inline-block;
+            background: linear-gradient(135deg, #c62828, #1b5e20);
+            color: white;
+            padding: 12px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-top: 15px;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-read:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body class="lang-bn">
+
+<div class="top-header" id="topHeader"></div>
+
+<div class="logo-social-bar">
+    <div class="container logo-social-flex">
+        <div class="logo-area">
+            <img src="../images/logo.png" alt="KYBDF Logo" onerror="this.src='https://via.placeholder.com/55?text=KYBDF'">
+            <div class="logo-text">
+                <h1 class="bn-name">কলমাকান্দা যুব রক্তদান ফাউন্ডেশন</h1>
+                <p class="en-name">Kalmakanda Youth Blood Donate Foundation (KYBDF)</p>
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="far fa-envelope"></i></a>
+            </div>
+            <div class="language-switch">
+                <button class="lang-option active" data-lang="bn">বাংলা</button>
+                <button class="lang-option" data-lang="en">English</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<nav class="navbar">
+    <div class="container nav-flex">
+        <div class="hamburger"><i class="fas fa-bars"></i></div>
+        <ul class="nav-menu">
+            <li><a href="../index.html">হোম</a></li>
+            <li><a href="about.html" class="active">আমাদের সম্পর্কে</a></li>
+            <li><a href="activities.html">কার্যক্রম</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">পরিষদ <i class="fas fa-chevron-down arrow-icon"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="advisors.html">উপদেষ্টা পরিষদ</a></li>
+                    <li><a href="governing-body.html">পরিচালনা পরিষদ</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">কমিটি <i class="fas fa-chevron-down arrow-icon"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="central-committee.html">কেন্দ্রীয় কমিটি</a></li>
+                    <li class="dropdown-submenu"><a href="#">ইউনিয়ন কমিটি <i class="fas fa-chevron-right"></i></a>
+                        <ul class="submenu">
+                            <li><a href="union-kalmakanda.html">কলমাকান্দা সদর ইউনিয়ন</a></li>
+                            <li><a href="union-nazirpur.html">নাজিরপুর ইউনিয়ন</a></li>
+                            <li><a href="union-pogla.html">পোগলা ইউনিয়ন</a></li>
+                            <li><a href="union-borkhapen.html">বড়খাপন ইউনিয়ন</a></li>
+                            <li><a href="union-lengura.html">লেঙ্গুড়া ইউনিয়ন</a></li>
+                            <li><a href="union-kailati.html">কৈলাটি ইউনিয়ন</a></li>
+                            <li><a href="union-khornai.html">খারনৈ ইউনিয়ন</a></li>
+                            <li><a href="union-rangchati.html">রংছাতি ইউনিয়ন</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-submenu"><a href="#">আঞ্চলিক কমিটি <i class="fas fa-chevron-right"></i></a>
+                        <ul class="submenu">
+                            <li><a href="regional-north.html">কলমাকান্দা উত্তর</a></li>
+                            <li><a href="regional-south.html">কলমাকান্দা দক্ষিণ</a></li>
+                            <li><a href="regional-west.html">কলমাকান্দা পশ্চিম</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">সদস্য ফরম <i class="fas fa-chevron-down arrow-icon"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="member-permanent.html">স্থায়ী সদস্য ফরম</a></li>
+                    <li><a href="member-general.html">সাধারণ সদস্য ফরম</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">সদস্য তালিকা <i class="fas fa-chevron-down arrow-icon"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="permanent-members.html">স্থায়ী সদস্য</a></li>
+                    <li><a href="general-members.html">সাধারণ সদস্য</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">গ্যালারি ও নিউজ <i class="fas fa-chevron-down arrow-icon"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="gallery.html">গ্যালারি</a></li>
+                    <li><a href="news.html">নিউজ</a></li>
+                </ul>
+            </li>
+            <li><a href="blood-donation.html">রক্তদান</a></li>
+            <li><a href="notice.html">নোটিশ</a></li>
+            <li><a href="donation.html">ডোনেশন</a></li>
+            <li><a href="contact.html">যোগাযোগ</a></li>
+            <li><a href="login.html" class="login-btn"><i class="fas fa-sign-in-alt"></i> লগইন</a></li>
+        </ul>
+        <button class="more-btn">More <i class="fas fa-chevron-down"></i></button>
+        <ul class="more-dropdown"></ul>
+    </div>
+</nav>
+
+<main>
+    <div class="container">
+        <div class="page-header">
+            <h1>আমাদের সম্পর্কে</h1>
+            <p>জানুন আমাদের যাত্রা, প্রতিষ্ঠাতা, লক্ষ্য ও অঙ্গীকার</p>
+        </div>
+        
+        <!-- প্রতিষ্ঠাতা সেকশন -->
+        <div class="content-card">
+            <h2><i class="fas fa-users"></i> সম্মানিত প্রতিষ্ঠাতাগণ</h2>
+            <div class="founder-grid">
+                <div class="founder-card">
+                    <img src="../images/founder1.png" alt="তানভীর রহমান শিপু" onerror="this.src='https://via.placeholder.com/130?text=T+Shipu'">
+                    <h3>তানভীর রহমান শিপু</h3>
+                    <p>প্রতিষ্ঠাতা ও প্রধান উদ্যোক্তা</p>
+                    <small>গঠনতন্ত্র ১.৭</small>
+                </div>
+                <div class="founder-card">
+                    <img src="../images/founder2.png" alt="মুরসালিন আহমেদ" onerror="this.src='https://via.placeholder.com/130?text=M+Ahmed'">
+                    <h3>মুরসালিন আহমেদ</h3>
+                    <p>সহ-প্রতিষ্ঠাতা ও নির্বাহী পরিচালক</p>
+                    <small>গঠনতন্ত্র ১.৭</small>
+                </div>
+                <div class="founder-card">
+                    <img src="../images/founder3.png" alt="হায়দার আলী সোহেল" onerror="this.src='https://via.placeholder.com/130?text=H+Ali'">
+                    <h3>হায়দার আলী সোহেল</h3>
+                    <p>সহ-প্রতিষ্ঠাতা ও সভাপতি</p>
+                    <small>গঠনতন্ত্র ১.৭</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- গঠনতন্ত্র পড়ুন -->
+        <div class="content-card">
+            <h2><i class="fas fa-file-alt"></i> গঠনতন্ত্র</h2>
+            <p>আমাদের সংগঠনের সম্পূর্ণ গঠনতন্ত্র নিচের বাটনে ক্লিক করে পড়ুন।</p>
+            <button class="btn-read" id="openPdfBtn"><i class="fas fa-book-open"></i> 📖 গঠনতন্ত্র পড়ুন</button>
+        </div>
+
+        <!-- সংগঠনের ইতিহাস -->
+        <div class="content-card">
+            <h2><i class="fas fa-history"></i> সংগঠনের ইতিহাস</h2>
+            <p>কলমাকান্দা যুব রক্তদান ফাউন্ডেশন (KYBDF) একটি অরাজনৈতিক, অলাভজনক ও মানবিক স্বেচ্ছাসেবী সংগঠন। ২০২৩ সালের ২৭ আগস্ট তারিখে আনুষ্ঠানিকভাবে যাত্রা শুরু করে এই সংগঠনটি। নেত্রকোণা জেলার কলমাকান্দা উপজেলায় জরুরি রক্তের অভাব দূর করতে এবং রক্তদানে সচেতনতা বাড়াতে এর প্রতিষ্ঠাতাগণ এগিয়ে আসেন।</p>
+            <p>প্রতিষ্ঠার পূর্বে কলমাকান্দা উপজেলায় কোন দায়িত্বশীল রক্তদান সংগঠন না থাকায় মুমূর্ষু রোগীরা রক্তের অভাবে অনেক কষ্ট পেতেন। এই অবস্থার পরিবর্তন আনার লক্ষ্যেই KYBDF-এর যাত্রা শুরু।</p>
+        </div>
+
+        <!-- সংগঠনের স্লোগান -->
+        <div class="content-card">
+            <h2><i class="fas fa-quote-left"></i> সংগঠনের স্লোগান</h2>
+            <p style="font-size: 26px; text-align: center; color: #c62828; font-weight: 700;">"রক্তদানে এগিয়ে আসুন, মাদককে না বলুন"</p>
+            <p style="text-align: center;">— গঠনতন্ত্রের ধারা ১.৫ অনুযায়ী</p>
+        </div>
+
+        <!-- সাংগঠনিক কাঠামো -->
+        <div class="content-card">
+            <h2><i class="fas fa-building"></i> সাংগঠনিক কাঠামো</h2>
+            <ul class="info-list">
+                <li><i class="fas fa-users"></i> <strong>উপদেষ্টা পরিষদ</strong> — সর্বনিম্ন ০৫ জন, আজীবন পদমর্যাদা</li>
+                <li><i class="fas fa-user-tie"></i> <strong>পরিচালনা পরিষদ</strong> — ০৬ থেকে ১৩ জন সদস্য, ৫টি বিভাগ</li>
+                <li><i class="fas fa-chalkboard-user"></i> <strong>কার্যকরী পরিষদ</strong> — ১৩টি স্থায়ী পদ, ০১ বছর মেয়াদ</li>
+                <li><i class="fas fa-flag-checkered"></i> <strong>ইউনিয়ন কমিটি</strong> — ৮টি ইউনিয়নে কার্যক্রম</li>
+                <li><i class="fas fa-map-marker-alt"></i> <strong>আঞ্চলিক কমিটি</strong> — উত্তর, দক্ষিণ, পশ্চিম অঞ্চলে কার্যক্রম</li>
+            </ul>
+        </div>
+
+        <!-- কার্যালয় ও যোগাযোগ -->
+        <div class="content-card">
+            <h2><i class="fas fa-map-marker-alt"></i> কার্যালয় ও যোগাযোগ</h2>
+            <ul class="info-list">
+                <li><i class="fas fa-location-dot"></i> <strong>প্রধান কার্যালয়:</strong> কলমাকান্দা উপজেলা সদর, নেত্রকোণা জেলা</li>
+                <li><i class="fas fa-phone"></i> <strong>মোবাইল:</strong> ০১৭৩৬-৫৬৭৬২০</li>
+                <li><i class="fab fa-whatsapp"></i> <strong>হোয়াটসঅ্যাপ:</strong> ০১৭৩৬-৫৬৭৬২০</li>
+                <li><i class="far fa-envelope"></i> <strong>ই-মেইল:</strong> kalmakandaybf@gmail.com</li>
+                <li><i class="fas fa-globe"></i> <strong>ওয়েবসাইট:</strong> bondhumohol-bds.org</li>
+            </ul>
+        </div>
+    </div>
+</main>
+
+<!-- PDF মডাল -->
+<div id="pdfModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <iframe id="pdfFrame" class="pdf-viewer" style="width:100%; height:80vh; border:none; border-radius:20px;"></iframe>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div><h4>কলমাকান্দা যুব রক্তদান ফাউন্ডেশন</h4><p>একটি অরাজনৈতিক স্বেচ্ছাসেবী রক্তদান ও সামাজিক সংগঠন</p></div>
+            <div><h4>যোগাযোগ</h4><p><i class="fas fa-phone"></i> ০১৭৩৬-৫৬৭৬২০<br><i class="fab fa-whatsapp"></i> ০১৭৩৬-৫৬৭৬২০<br><i class="far fa-envelope"></i> kalmakandaybf@gmail.com</p></div>
+            <div><h4>প্রধান কার্যালয়</h4><p>কলমাকান্দা সদর, নেত্রকোণা</p></div>
+        </div>
+        <div class="copyright"><p>&copy; ২০২৩-২০২৬ KYBDF | সর্বস্বত্ব সংরক্ষিত | Developed by: Tanvir Rahman Shipu</p></div>
+    </div>
+</footer>
+
+<script src="../js/script.js"></script>
+<script>
+    const modal = document.getElementById('pdfModal');
+    const openBtn = document.getElementById('openPdfBtn');
+    const pdfFrame = document.getElementById('pdfFrame');
+    const pdfPath = '../images/constitution.pdf';
+    
+    if (openBtn) {
+        openBtn.addEventListener('click', () => {
+            pdfFrame.src = pdfPath;
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        });
+    }
+    
+    window.closeModal = function() {
+        modal.style.display = 'none';
+        if (pdfFrame) pdfFrame.src = '';
+        document.body.style.overflow = 'auto';
+    }
+    
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) window.closeModal();
+    });
+</script>
+</body>
+</html>
